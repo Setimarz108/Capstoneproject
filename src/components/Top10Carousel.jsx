@@ -6,6 +6,7 @@ import {useGetCryptosQuery} from '../services/cryptoApi'
 import { Card } from 'antd';
 import './Top10Carousel.css';
 import Carousel from 'react-grid-carousel'
+import Loader from './Loader';
 
 
 function Top10Carousel({simplified}) {
@@ -24,7 +25,7 @@ function Top10Carousel({simplified}) {
    }, [coinsList, searchCrypto])
    
    console.log(coins)
-if(isFetching) return 'Loading...'
+if(isFetching) return <Loader />
 
    return (
       <>

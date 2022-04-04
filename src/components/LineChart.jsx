@@ -27,10 +27,7 @@ import {
 
 function LineChart({coinHistory, currentPrice, coinName}) {
 
-      const [chartData, setChartData] = useState([])
-      const [chartLabels, setChartLabels] = useState([])
-
-      const getData = () => {
+        
         const coinPrice = [];
         const coinTimestamp = [];
  
@@ -39,12 +36,10 @@ function LineChart({coinHistory, currentPrice, coinName}) {
               coinPrice.push(coinHistory?.data?.history[i].price) 
               coinTimestamp.push(new Date(coinHistory?.data?.history[i].timestamp * 1000).toLocaleDateString())         
         }
-
-        set
  
         console.log("coin history", coinHistory)
         console.log("coin Price", coinPrice)
-      }
+ 
 
 
        

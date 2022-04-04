@@ -47,7 +47,7 @@ if(isFetching) return 'Loading...'
       <Col className="coin-heading-container">
       <img src={cryptoDetails?.iconUrl} alt="coin" style={{width:"20%"}} />
         
-         <h1 className="coin-name" style={{fontSize: "4rem"}}>
+         <h1 className="coin-name sm:text-base lg:text-lg">
            {cryptoDetails?.name} ({cryptoDetails?.symbol}) 
            </h1>
            <a href={cryptoDetails?.websiteUrl}>{cryptoDetails?.websiteUrl}</a>

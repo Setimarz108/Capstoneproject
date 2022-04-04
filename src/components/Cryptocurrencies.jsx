@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import {useGetCryptosQuery} from '../services/cryptoApi'
 import { Card } from 'antd';
+import Loader from './Loader';
 
 function Cryptocurrencies({simplified}) {
    
@@ -20,7 +21,7 @@ function Cryptocurrencies({simplified}) {
  
    }, [coinsList, searchCrypto])
   
-if(isFetching) return 'Loading...'
+if(isFetching) return <Loader />
 
    return (
       <>
